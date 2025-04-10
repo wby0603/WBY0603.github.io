@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简儿 Next3 - 智能QQ机器人</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #fff;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 3.5rem;
+            background: linear-gradient(45deg, #7f7fd5, #86a8e7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            color: #86a8e7;
+            font-size: 1.2rem;
+        }
+
+        .video-container {
+            position: relative;
+            width: 100%;
+            padding-bottom: 56.25%;
+            margin: 2rem 0;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.05);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: #7f7fd5;
+            margin-bottom: 1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-github {
+            background: #24292e;
+            color: white;
+        }
+
+        .btn-bilibili {
+            background: #00a1d6;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .protocol {
+            text-align: center;
+            margin: 2rem 0;
+            padding: 1.5rem;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: rgba(255,255,255,0.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="title">简儿 Next3</h1>
+            <p class="subtitle">下一代智能QQ机器人解决方案</p>
+        </header>
+
+        <div class="video-container">
+            <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114313960364461&bvid=BV1iDdLYJEwm&cid=29340926018&p=1" 
+                    scrolling="no" 
+                    allowfullscreen="true">
+            </iframe>
+        </div>
+
+        <div class="protocol">
+            🚀 基于 Lagrange.OneBot V11 协议构建
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-robot feature-icon"></i>
+                <h3>支持平台</h3>
+                <p>全面适配QQ/</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-comment-dots feature-icon"></i>
+                <h3>智能交互</h3>
+                <p>深度融合deepseek,openchat等主流机器人api</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-cogs feature-icon"></i>
+                <h3>图形化配置页面</h3>
+                <p>简单的功能配置</p>
+            </div>
+        </div>
+
+        <div class="cta-buttons">
+            <a href="https://github.com/SRInternet-Studio/Jianer_QQ_bot/tree/NEXT-PREVIEW" 
+               class="btn btn-github"
+               target="_blank">
+                <i class="fab fa-github"></i>
+                GitHub仓库
+            </a>
+            <a href="https://space.bilibili.com/1969160969" 
+               class="btn btn-bilibili"
+               target="_blank">
+                <i class="fab fa-bilibili"></i>
+                哔哩哔哩主页
+            </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 思锐工作室 | 基于 OneBot 协议开发</p>
+    </footer>
+</body>
+</html>
