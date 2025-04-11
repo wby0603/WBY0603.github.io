@@ -5,52 +5,80 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>简儿 Next3 - 智能QQ机器人</title>
     <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        :root {
+            --neon-blue: #7f7fd5;
+            --hologram-teal: #2de2e6;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            font-family: 'Space Grotesk', 'Microsoft YaHei', sans-serif;
         }
 
         body {
-            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            background: linear-gradient(135deg, #0a0a1a 0%, #0d1a2d 100%);
             color: #fff;
             line-height: 1.6;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 2rem;
+            position: relative;
+        }
+
+        /* 修复背景覆盖问题 */
+        .container::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(127,127,213,0.15) 0%, transparent 70%);
+            z-index: 0;
+            animation: float 12s infinite linear;
         }
 
         .header {
             text-align: center;
             margin-bottom: 3rem;
+            position: relative;
+            z-index: 2;
         }
 
         .title {
-            font-size: 3.5rem;
-            background: linear-gradient(45deg, #7f7fd5, #86a8e7);
+            font-size: 4rem;
+            background: linear-gradient(120deg, var(--neon-blue), var(--hologram-teal));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             margin-bottom: 1rem;
         }
 
         .subtitle {
-            color: #86a8e7;
-            font-size: 1.2rem;
+            font-size: 1.4rem;
+            background: linear-gradient(90deg, var(--hologram-teal), var(--neon-blue));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
         }
 
+        /* 视频容器修复 */
         .video-container {
             position: relative;
             width: 100%;
             padding-bottom: 56.25%;
-            margin: 2rem 0;
+            margin: 3rem 0;
             border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            background: #000;
+            z-index: 2;
         }
 
         .video-container iframe {
@@ -62,19 +90,23 @@
             border: none;
         }
 
+        /* 功能卡片修复 */
         .features {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
-            margin: 3rem 0;
+            margin: 4rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .feature-card {
             background: rgba(255,255,255,0.05);
             padding: 2rem;
-            border-radius: 10px;
+            border-radius: 15px;
             text-align: center;
             transition: transform 0.3s ease;
+            backdrop-filter: blur(8px);
         }
 
         .feature-card:hover {
@@ -83,54 +115,68 @@
 
         .feature-icon {
             font-size: 2.5rem;
-            color: #7f7fd5;
+            color: var(--neon-blue);
             margin-bottom: 1rem;
         }
 
+        /* 按钮容器修复 */
         .cta-buttons {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
+            gap: 2rem;
+            margin: 3rem 0;
+            position: relative;
+            z-index: 2;
         }
 
         .btn {
-            padding: 1rem 2rem;
-            border-radius: 50px;
+            padding: 1.2rem 2.5rem;
+            border-radius: 8px;
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
-            transition: all 0.3s ease;
+            gap: 1rem;
+            transition: transform 0.3s ease;
         }
 
         .btn-github {
-            background: #24292e;
+            background: linear-gradient(135deg, #24292e 0%, #0d1117 100%);
             color: white;
         }
 
         .btn-bilibili {
-            background: #00a1d6;
+            background: linear-gradient(135deg, #00a1d6 0%, #006c8e 100%);
             color: white;
         }
 
         .btn:hover {
             transform: scale(1.05);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
+        /* 协议声明修复 */
         .protocol {
             text-align: center;
-            margin: 2rem 0;
-            padding: 1.5rem;
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
+            margin: 3rem auto;
+            padding: 1.5rem 3rem;
+            background: rgba(45,226,230,0.1);
+            border-radius: 50px;
+            display: block;
+            position: relative;
+            z-index: 2;
         }
 
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
             color: rgba(255,255,255,0.6);
+            position: relative;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0) rotate(0deg); }
+            25% { transform: translate(100px, 50px) rotate(5deg); }
+            50% { transform: translate(-80px, -30px) rotate(-5deg); }
+            75% { transform: translate(60px, 20px) rotate(3deg); }
         }
     </style>
 </head>
@@ -149,14 +195,14 @@
         </div>
 
         <div class="protocol">
-            🚀 基于 Lagrange.OneBot V11 协议构建
+            🚀 基于 OneBot V11 协议构建
         </div>
 
         <div class="features">
             <div class="feature-card">
                 <i class="fas fa-robot feature-icon"></i>
                 <h3>支持平台</h3>
-                <p>全面适配QQ</p>
+                <p>全面适配QQ/</p>
             </div>
             <div class="feature-card">
                 <i class="fas fa-comment-dots feature-icon"></i>
