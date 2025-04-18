@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Noto Sans SC', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* 导航栏样式 */
+.nav-link {
+    @apply text-gray-700 hover:text-blue-600 transition-colors font-medium;
+}
+
+/* 按钮样式 */
+.btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center;
+}
+
+.btn-secondary {
+    @apply bg-white hover:bg-gray-100 text-gray-800 px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center border border-gray-300;
+}
+
+.btn-tertiary {
+    @apply bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-md font-medium transition-colors inline-flex items-center;
+}
+
+/* Hero 部分 */
+.hero-section {
+    background-image: url('../images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
+
+/* 产品卡片 */
+.product-card {
+    @apply bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-gray-100;
+}
+
+.product-icon {
+    @apply w-12 h-12 rounded-full flex items-center justify-center text-xl mb-4;
+}
+
+.product-title {
+    @apply text-xl font-semibold text-gray-800 mb-2;
+}
+
+.product-description {
+    @apply text-gray-600 mb-4;
+}
+
+.product-tag {
+    @apply inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded;
+}
+
+/* 统计盒子 */
+.stat-box {
+    @apply bg-gray-50 p-4 rounded-lg text-center min-w-[100px];
+}
+
+.stat-number {
+    @apply text-2xl font-bold text-blue-600 mb-1;
+}
+
+.stat-label {
+    @apply text-sm text-gray-600;
+}
+
+/* 社区链接 */
+.community-link {
+    @apply flex items-center justify-center text-white py-3 px-4 rounded-md transition-colors;
+}
+
+/* 热搜排行榜 */
+.trending-item {
+    @apply flex items-center justify-between py-2 px-3 bg-white rounded hover:bg-gray-100 transition-colors;
+}
+
+.trending-rank {
+    @apply font-bold text-blue-600 w-6 text-center;
+}
+
+.trending-topic {
+    @apply flex-1 text-gray-800;
+}
+
+.trending-count {
+    @apply text-sm text-gray-500;
+}
+
+/* 视频容器 */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .hero-section {
+        min-height: 60vh;
+    }
+    
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+}
+
+/* 动画 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+}
