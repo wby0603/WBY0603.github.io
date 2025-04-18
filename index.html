@@ -3,169 +3,386 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>简儿NEXT³ - 简单 个性 全知</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', sans-serif;
-        }
-
-        body {
-            min-height: 100vh;
-            background: linear-gradient(-45deg, #0a0a2e, #1a1a4f, #2d1a4f, #4a1a4f);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            color: #fff;
-            overflow-x: hidden;
-        }
-
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-            position: relative;
-            z-index: 1;
-        }
-
-        .header {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        .title {
-            font-size: 3.5rem;
-            background: linear-gradient(90deg, #00f7ff, #a200ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            text-shadow: 0 0 20px rgba(0, 247, 255, 0.3);
-            margin-bottom: 1rem;
-        }
-
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-top: 56.25%;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 0 30px rgba(0, 247, 255, 0.2);
-            margin: 2rem 0;
-            border: 2px solid rgba(255, 255, 255, 0.1);
-        }
-
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        .links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .link-btn {
-            padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 8px;
-            backdrop-filter: blur(10px);
-            color: #fff;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .link-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 247, 255, 0.3);
-            background: rgba(0, 247, 255, 0.1);
-        }
-
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-
-        .feature-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-5px);
-        }
-
-        @media (max-width: 768px) {
-            .title {
-                font-size: 2.5rem;
-            }
-            
-            .links {
-                flex-direction: column;
-            }
-        }
-    </style>
+    <meta name="description" content="思锐工作室 - 一个以青少年编程为中心的编程学习讨论类群体">
+    <title>思锐工作室 | 青少年编程学习社区</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1 class="title">简儿NEXT³</h1>
-            <p style="color: #aaa; font-size: 1.2rem;">基于OneBot v11协议的智能机器人解决方案</p>
-        </div>
-
-        <div class="video-container">
-            <iframe src="//player.bilibili.com/player.html?isOutside=true&aid=114313960364461&bvid=BV1iDdLYJEwm&cid=29340926018&p=1" 
-                    scrolling="no" 
-                    frameborder="no" 
-                    allowfullscreen="true"></iframe>
-        </div>
-
-        <div class="features">
-            <div class="feature-card">
-                <h3><i class="fas fa-rocket"></i> 支持平台</h3>
-                <p style="margin-top: 1rem; color: #ccc;">全面适配QQ</p>
-            </div>
-            <div class="feature-card">
-                <h3><i class="fas fa-shield-alt"></i> 安全稳定</h3>
-                <p style="margin-top: 1rem; color: #ccc;">采用onebot v11协议架构</p>
-            </div>
-            <div class="feature-card">
-                <h3><i class="fas fa-magic"></i> 智能交互</h3>
-                <p style="margin-top: 1rem; color: #ccc;">深度融合deepseek,openchat等主流api</p>
-            </div>
-        </div>
-
-        <div class="links">
-            <a href="https://github.com/SRInternet-Studio/Jianer_QQ_bot/tree/NEXT-PREVIEW" class="link-btn" target="_blank">
-                <i class="fab fa-github"></i> GitHub仓库
-            </a>
-            <a href="https://space.bilibili.com/1969160969" class="link-btn" target="_blank">
-                <i class="fab fa-bilibili"></i> 哔哩哔哩主页
-            </a>
-        </div>
+<body class="font-sans bg-gray-50">
+    <!-- 预加载动画 -->
+    <div id="preloader" class="fixed inset-0 z-50 flex items-center justify-center bg-white">
+        <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-500"></div>
     </div>
+
+    <!-- 导航栏 -->
+    <nav class="fixed w-full bg-white shadow-md z-40">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800 hover:text-blue-600 transition-colors">
+                <span class="text-blue-600">思锐</span>工作室
+            </a>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="nav-link">关于我们</a>
+                <a href="#products" class="nav-link">产品介绍</a>
+                <a href="#community" class="nav-link">社区</a>
+                <a href="#contact" class="nav-link">联系我们</a>
+            </div>
+            <div class="flex space-x-4">
+                <a href="https://space.bilibili.com/1969160969" target="_blank" class="text-gray-600 hover:text-red-500 transition-colors">
+                    <i class="fab fa-bilibili text-xl"></i>
+                </a>
+                <a href="https://github.com/SRInternet-Studio" target="_blank" class="text-gray-600 hover:text-gray-900 transition-colors">
+                    <i class="fab fa-github text-xl"></i>
+                </a>
+                <button id="mobile-menu-button" class="md:hidden text-gray-600 focus:outline-none">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+        <!-- 移动菜单 -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-2 px-4 shadow-lg">
+            <a href="#about" class="block py-2 nav-link">关于我们</a>
+            <a href="#products" class="block py-2 nav-link">产品介绍</a>
+            <a href="#community" class="block py-2 nav-link">社区</a>
+            <a href="#contact" class="block py-2 nav-link">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- Hero 部分 -->
+    <section class="hero-section pt-24 pb-16 md:pt-32 md:pb-24 relative overflow-hidden">
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl">
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-4 leading-tight">
+                    探索编程的<span class="text-blue-300">无限可能</span>
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-200 mb-8">
+                    思锐工作室 - 一个以青少年编程为中心的编程学习讨论类群体
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://space.bilibili.com/1969160969" target="_blank" class="btn-primary">
+                        <i class="fab fa-bilibili mr-2"></i> B站主页
+                    </a>
+                    <a href="https://github.com/SRInternet-Studio" target="_blank" class="btn-secondary">
+                        <i class="fab fa-github mr-2"></i> GitHub
+                    </a>
+                    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0OC7vApC79hlsj1cx1SapeOKI_PaAaXY&jump_from=webapi&authKey=4c9uHeinCJS+DhdSe/CRUVCL6h22wqKtzrTxO82E1QSh4mwB9B5e3liZKOl1G8kN" target="_blank" class="btn-tertiary">
+                        <i class="fas fa-users mr-2"></i> 加入群聊
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-50 z-0"></div>
+        <div class="hero-video absolute inset-0 -z-10">
+            <!-- 使用背景图片替代视频 -->
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                 alt="编程背景" 
+                 class="w-full h-full object-cover"
+                 loading="eager">
+        </div>
+    </section>
+
+    <!-- 关于我们 -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">关于思锐工作室</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" 
+                         alt="思锐工作室团队" 
+                         class="rounded-lg shadow-xl w-full" 
+                         loading="lazy">
+                </div>
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">我们的使命</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        思锐工作室成立于2019年，致力于为青少年提供优质的编程学习资源和交流平台。我们相信编程不仅是未来的一项基本技能，更是培养逻辑思维和创造力的绝佳途径。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        通过我们的产品和服务，我们希望降低编程学习的门槛，让更多年轻人能够享受创造的乐趣，并在技术世界中找到自己的位置。
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <div class="stat-box">
+                            <div class="stat-number">1000+</div>
+                            <div class="stat-label">社区成员</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">20+</div>
+                            <div class="stat-label">开源项目</div>
+                        </div>
+                        <div class="stat-box">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">核心产品</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品介绍 -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">我们的产品</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- 壁纸生成器 -->
+                <div class="product-card">
+                    <div class="product-icon bg-blue-100 text-blue-600">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3 class="product-title">壁纸生成器 4</h3>
+                    <p class="product-description">带你进入新次元。基于SRIntelligence服务器集群提供的算力生成图片，具有高自由度且完全免费。</p>
+                    <div class="product-tag">AI绘图</div>
+                    <a href="https://www.bilibili.com/video/BV1j6CHYMErm/" target="_blank" class="product-link">查看演示视频</a>
+                </div>
+                
+                <!-- ACG生成 -->
+                <div class="product-card">
+                    <div class="product-icon bg-purple-100 text-purple-600">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <h3 class="product-title">ACG生成</h3>
+                    <p class="product-description">从 ACG生图API 获取喜爱的ACG图片。智能艺术平台+分布式技术，合规海外资源智能生成。</p>
+                    <div class="product-tag">艺术创作</div>
+                </div>
+                
+                <!-- 简儿 -->
+                <div class="product-card">
+                    <div class="product-icon bg-pink-100 text-pink-600">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="product-title">简儿</h3>
+                    <p class="product-description">你的下一位女友，何必是女友。基于自有API请求模型，在QQ中随时可用，可以从互联网上获取信息。</p>
+                    <div class="product-tag">AI对话</div>
+                    <a href="https://www.bilibili.com/video/BV1hMPBedEMM/" target="_blank" class="product-link">查看演示视频</a>
+                </div>
+                
+                <!-- TimerIn 桌面时钟 -->
+                <div class="product-card">
+                    <div class="product-icon bg-green-100 text-green-600">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="product-title">TimerIn 桌面时钟</h3>
+                    <p class="product-description">分秒必争。通过多样的规则设置日程代办，并以丰富的形式，在预定的时间，有效提醒自己。</p>
+                    <div class="product-tag">效率工具</div>
+                    <a href="https://www.bilibili.com/video/BV1vU411U7To/" target="_blank" class="product-link">查看演示视频</a>
+                </div>
+                
+                <!-- 希沃定制启动器 -->
+                <div class="product-card">
+                    <div class="product-icon bg-yellow-100 text-yellow-600">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="product-title">希沃定制启动器</h3>
+                    <p class="product-description">用定制启动器点缀万物！高度可自定义，可适用于任何软件的启动，可以使用视频/图片作为启动底图。</p>
+                    <div class="product-tag">美化工具</div>
+                    <a href="https://www.bilibili.com/video/BV1ky42187JM/" target="_blank" class="product-link">查看演示视频</a>
+                </div>
+                
+                <!-- 班级热搜排行榜 -->
+                <div class="product-card">
+                    <div class="product-icon bg-red-100 text-red-600">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="product-title">班级热搜排行榜</h3>
+                    <p class="product-description">实时追踪班级热点话题，了解同学们最关注的内容。基于大数据分析，提供精准的热度排行。</p>
+                    <div class="product-tag">数据分析</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 社区与视频 -->
+    <section id="community" class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">社区与视频</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- 主视频 -->
+                <div class="video-card">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">思锐工作室介绍</h3>
+                    <div class="video-container">
+                        <iframe src="https://player.bilibili.com/player.html?bvid=BV1ZUXJYxEUt&high_quality=1&danmaku=0" 
+                                scrolling="no" 
+                                border="0" 
+                                frameborder="no" 
+                                framespacing="0" 
+                                allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                
+                <!-- 简儿视频 -->
+                <div class="video-card">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">简儿 - AI助手</h3>
+                    <div class="video-container">
+                        <iframe src="https://player.bilibili.com/player.html?bvid=BV1hMPBedEMM&high_quality=1&danmaku=0" 
+                                scrolling="no" 
+                                border="0" 
+                                frameborder="no" 
+                                framespacing="0" 
+                                allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                
+                <!-- TimerIn视频 -->
+                <div class="video-card">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">TimerIn 桌面时钟</h3>
+                    <div class="video-container">
+                        <iframe src="https://player.bilibili.com/player.html?bvid=BV1vU411U7To&high_quality=1&danmaku=0" 
+                                scrolling="no" 
+                                border="0" 
+                                frameborder="no" 
+                                framespacing="0" 
+                                allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+                
+                <!-- 希沃启动器视频 -->
+                <div class="video-card">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">希沃定制启动器</h3>
+                    <div class="video-container">
+                        <iframe src="https://player.bilibili.com/player.html?bvid=BV1ky42187JM&high_quality=1&danmaku=0" 
+                                scrolling="no" 
+                                border="0" 
+                                frameborder="no" 
+                                framespacing="0" 
+                                allowfullscreen="true"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-gray-50 p-6 rounded-lg shadow-sm">
+                    <h3 class="text-xl font-semibold mb-4 text-gray-800">加入我们的社区</h3>
+                    <p class="text-gray-600 mb-6">与志同道合的编程爱好者交流，获取最新项目动态和技术分享。</p>
+                    
+                    <div class="space-y-4">
+                        <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0OC7vApC79hlsj1cx1SapeOKI_PaAaXY&jump_from=webapi&authKey=4c9uHeinCJS+DhdSe/CRUVCL6h22wqKtzrTxO82E1QSh4mwB9B5e3liZKOl1G8kN" target="_blank" class="community-link bg-blue-500 hover:bg-blue-600">
+                            <i class="fab fa-qq mr-2"></i> QQ交流群
+                        </a>
+                        <a href="https://space.bilibili.com/1969160969" target="_blank" class="community-link bg-red-500 hover:bg-red-600">
+                            <i class="fab fa-bilibili mr-2"></i> B站主页
+                        </a>
+                        <a href="https://github.com/SRInternet-Studio" target="_blank" class="community-link bg-gray-800 hover:bg-gray-900">
+                            <i class="fab fa-github mr-2"></i> GitHub组织
+                        </a>
+                    </div>
+                </div>
+
+    <!-- 联系我们 -->
+    <section id="contact" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">联系我们</h2>
+                <div class="w-20 h-1 bg-blue-500 mx-auto"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-md overflow-hidden">
+                <div class="md:flex">
+                    <div class="md:w-1/2 bg-blue-600 text-white p-8">
+                        <h3 class="text-2xl font-semibold mb-4">联系方式</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <i class="fas fa-envelope mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">电子邮件</h4>
+                                    <p class="text-blue-100">contact@srirui-studio.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fab fa-bilibili mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">Bilibili</h4>
+                                    <p class="text-blue-100">@思锐工作室</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fab fa-github mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">GitHub</h4>
+                                    <p class="text-blue-100">SRInternet-Studio</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fab fa-qq mt-1 mr-4"></i>
+                                <div>
+                                    <h4 class="font-medium">QQ群</h4>
+                                    <p class="text-blue-100">点击上方"加入群聊"</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 p-8">
+                        <h3 class="text-2xl font-semibold mb-4 text-gray-800">发送消息</h3>
+                        <form class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-700 mb-1">姓名</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">邮箱</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-1">消息</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                                发送消息
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-8">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-2xl font-bold">
+                        <span class="text-blue-400">思锐</span>工作室
+                    </a>
+                    <p class="mt-2 text-gray-400">一个以青少年编程为中心的编程学习讨论类群体</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://space.bilibili.com/1969160969" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-bilibili text-xl"></i>
+                    </a>
+                    <a href="https://github.com/SRInternet-Studio" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://qm.qq.com/cgi-bin/qm/qr?k=0OC7vApC79hlsj1cx1SapeOKI_PaAaXY&jump_from=webapi&authKey=4c9uHeinCJS+DhdSe/CRUVCL6h22wqKtzrTxO82E1QSh4mwB9B5e3liZKOl1G8kN" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                        <i class="fab fa-qq text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 mb-4 md:mb-0">© 2019-2025 思锐工作室. 保留所有权利.</p>
+                <p class="text-gray-400">湘ICP备2025108132号-2</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-blue-700 focus:outline-none">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
-
